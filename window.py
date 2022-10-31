@@ -7,7 +7,7 @@ class myWindow(QMainWindow):
     def __init__(self):
         super(myWindow,self).__init__()
         self.setGeometry(0,0,500,500)
-        self.setWindowTitle("Teste")
+        self.setWindowTitle("Estudo de qtFramework")
         self.initUI()
 
     def initUI(self):
@@ -15,15 +15,18 @@ class myWindow(QMainWindow):
         self.label.setText("Label Simples")
         self.label.move(50,50)
 
+        # Button
         self.b1 = QtWidgets.QPushButton(self)
         self.b1.setText("aperta aqui")
         self.b1.clicked.connect(self.clicked)
 
     def clicked(self):
+        # Set state function button
         self.label.setText("clicked")
         self.update()
 
     def update(self):
+        # Responsivity
         self.label.adjustSize()
 
 def window():
